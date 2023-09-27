@@ -4,9 +4,9 @@ import { ImMail } from "react-icons/im";
 
 const ContactMe = () => {
     return (
-        <div id="contactMe" className="text-white text-center min-h-screen md:pt-0 pt-14 px-5">
+        <div id="contactMe" className="text-white text-center md:pb-16 pb-12 px-5">
             <JackInTheBox>
-                <h2 className="text-4xl font-bold text-center py-10 text-white">Contact Me</h2>
+                <h2 className="text-4xl font-bold text-center pb-8 text-white">Contact Me</h2>
             </JackInTheBox>
             <div>
                 <div>

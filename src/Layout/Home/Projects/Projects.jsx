@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const Projects = () => {
     return (
-        <div id="projects" className="min-h-screen md:pt-0 pt-14">
-            <div className="flex justify-between items-center py-10 text-white px-5">
+        <div id="projects" className="md:pb-16 md:pt-10 pb-12">
+            <div className="flex justify-between items-center pb-8 text-white px-5">
                 <JackInTheBox><h2 className="text-4xl font-bold">Top Projects</h2></JackInTheBox>
-                <Link to="/allProjects" className="text-lg font-bold text-blue-600 underline">See All Projects</Link>
+                <Link to="/allProjects" className="text-lg text-right font-bold text-blue-600 underline">See All Projects</Link>
             </div>
             <Fade duration={4000}>
-                <div className="px-5 grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                <div className="px-5 grid grid-cols-1 md:grid-cols-3 gap-5">
                     <div className="h-auto rounded-lg mb-5 bg-slate-300">
                         <div className="h-[300px] overflow-y-scroll">
                             <img className="w-full" src="https://i.ibb.co/zn2zPcJ/Sportify-Academy-Home.png" alt="" />
