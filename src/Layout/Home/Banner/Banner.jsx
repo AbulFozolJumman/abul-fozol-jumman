@@ -19,7 +19,7 @@ const Banner = () => {
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/abul-fozol-jumman-414734279/"><span className="text-blue-500"><FaLinkedin></FaLinkedin></span></a>
                     <a target="_blank" rel="noreferrer" href="https://www.facebook.com/MDAFZumman/"><span className="text-blue-700"><FaFacebookSquare></FaFacebookSquare></span></a>
                 </div>
-                <a download="Abul Fozol Jumman - Resume" href={resume} className="text-base mt-5 py-2 px-6 bg-green-600 font-bold rounded-3xl flex items-center gap-2 max-w-[180px] mx-auto">
+                <a download="Abul Fozol Jumman - Resume" href={resume} id="resume" className="text-base mt-5 py-2 px-5 bg-green-600 font-bold rounded-3xl flex items-center gap-2 max-w-[160px] mx-auto">
                     <span><FaFileDownload></FaFileDownload></span> MY RESUME
                 </a>
             </div>

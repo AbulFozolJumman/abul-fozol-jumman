@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <div className="text-white font-bold flex items-center justify-center bg-[url('https://media.istockphoto.com/id/1286354786/vector/dark-prism-textured-abstract-background.jpg?s=612x612&w=0&k=20&c=lJiYScAyV7Iqn5FKdxMYCuntLO0ljQkR_oEftweNjmE=')]">
-            <Link to="/" className="block py-4 hover:bg-gray-400 px-6">Home</Link>
-            <Link to="/allProjects" className="block py-4 hover:bg-gray-400 px-6">Projects</Link>
-            <Link to="/about" className="block py-4 hover:bg-gray-400 px-6">About Me</Link>
-        </div>
+        <nav className="flex items-center justify-start px-10 absolute top-0 left-0 py-10 z-50 w-full">
+            <Link to="/">
+                <img className="w-[200px] mr-40" src="https://i.ibb.co/6XR34qH/IMG-1401.jpg" alt="" />
+            </Link>
+            <div className="font-bold flex items-center justify-center">
+                <Link to="/" className="py-2 px-4 ml-3 rounded-3xl transition-colors duration-500 font-semibold text-white bg-[#359381]">Home</Link>
+                <a href="#projects" className="text-[#359381] py-2 px-4 ml-3 rounded-3xl transition-colors duration-500 font-semibold hover:text-white hover:bg-[#359381]">Projects</a>
+                <a href="#about" className="text-[#359381] py-2 px-4 ml-3 rounded-3xl transition-colors duration-500 font-semibold hover:text-white hover:bg-[#359381]">About</a>
+                <a href="#contact" className="text-[#359381] py-2 px-4 ml-3 rounded-3xl transition-colors duration-500 font-semibold hover:text-white hover:bg-[#359381]">Contact</a>
+            </div>
+        </nav>
     );
 };
 

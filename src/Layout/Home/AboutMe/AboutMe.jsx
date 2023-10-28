@@ -12,7 +12,7 @@ import { JackInTheBox } from "react-awesome-reveal"
 
 const AboutMe = () => {
     return (
-        <div className="text-white md:pb-16 pb-12 px-5 md:px-[20%]" id="aboutMe">
+        <div className="text-white md:pb-16 pb-12 px-5 md:px-[20%]" id="about">
             <JackInTheBox><h2 className="text-4xl font-bold text-center pb-8 text-white">About Me</h2></JackInTheBox>
             <p className="text-white text-center">
                 I am a passionate Full Stack web developer with strong foundational skills in HTML, CSS, JavaScript,
