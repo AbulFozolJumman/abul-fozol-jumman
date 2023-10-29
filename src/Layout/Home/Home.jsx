@@ -51,10 +51,10 @@ const Home = () => {
                 <img className="absolute top-0 right-0 w-full" src={Leaf} alt="Leaf" ref={leafRef} />
                 <div className="absolute" ref={textRef}>
                     <Slide duration={1300}>
-                        <h1 className="text-[6vw] md:text-[#fff] text-[#003329] font-bold text-center">ABUL FOZOL JUMMAN</h1>
+                        <h1 className="text-[8vw] md:text-[6vw] md:text-[#fff] text-[#003329] font-bold text-center">ABUL FOZOL JUMMAN</h1>
                     </Slide>
                     <Slide direction={"right"} duration={1300}>
-                        <p className="text-[4vw] md:text-[#fff] text-[#003329] font-bold text-center">Full Stack Web Developer</p>
+                        <p className="md:text-[4vw] text-[6vw] md:text-[#fff] text-[#003329] font-bold text-center">Full Stack Web Developer</p>
                     </Slide>
                 </div>
                 <img className="absolute bottom-0 w-full" src={Plant} alt="Plant" />

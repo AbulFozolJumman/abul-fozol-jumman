@@ -2,6 +2,7 @@ import { Fade, JackInTheBox } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 import sportify from "../../assets/Sportify-Academy-Home.png"
 import toyVerse from "../../assets/Toy-Verse-Home.png"
+import visuality from "../../assets/Home-Visuality.png"
 
 const AllProjects = () => {
     return (
@@ -31,6 +32,19 @@ const AllProjects = () => {
                                 <a target="_blank" rel="noreferrer" href="https://toy-verse-1b21f.web.app/">Live Site</a> |
                                 <a target="_blank" rel="noreferrer" href="https://github.com/AbulFozolJumman/Toy-Verse-Frontend"> Frontend Code</a> |
                                 <a target="_blank" rel="noreferrer" href="https://github.com/AbulFozolJumman/Toy-Verse-Backend"> Backend Code</a>
+                            </div>
+                        </div>
+                        <div className="bg-slate-300 h-auto rounded-lg mb-5">
+                            <div className="h-[300px] overflow-y-scroll">
+                                <img className="w-full" src={visuality} alt="" />
+                            </div>
+                            <p className="px-1 mt-5 text-lg"><span className="font-bold">Visuality -</span>  A Next JS web application for getting advice from professional life
+                                coach
+                            </p>
+                            <div className="text-blue-600 my-4 px-1 text-lg font-semibold">
+                                <a target="_blank" rel="noreferrer" href="https://visuality-your-life-coach.vercel.app/">Live Site</a> |
+                                <a target="_blank" rel="noreferrer" href="https://github.com/AbulFozolJumman/Visuality-Your-Life-Coach"> Frontend Code</a> |
+                                <a target="_blank" rel="noreferrer" href="#"> Backend Code</a>
                             </div>
                         </div>
                         <div className="bg-slate-300 h-auto rounded-lg mb-5">
