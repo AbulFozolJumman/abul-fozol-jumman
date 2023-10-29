@@ -18,34 +18,31 @@ import { useRef, useEffect } from 'react';
 const Home = () => {
     const textRef = useRef(null);
     const leafRef = useRef(null);
-    const hill1Ref = useRef(null);
     const hill4Ref = useRef(null);
     const hill5Ref = useRef(null);
 
     useEffect(() => {
         let text = textRef.current;
         let leaf = leafRef.current;
-        let hill1 = hill1Ref.current;
         let hill4 = hill4Ref.current;
         let hill5 = hill5Ref.current;
 
         window.addEventListener("scroll", () => {
             let value = window.scrollY;
 
-            text.style.marginTop = value * 2.5 + "px";
+            text.style.marginTop = value * 1.5 + "px";
             leaf.style.top = value * -1.5 + "px";
             leaf.style.left = value * 1.5 + "px";
             hill5.style.right = value * -1.5 + "px";
             hill4.style.left = value * -1.5 + "px";
-            hill1.style.top = value * 1 + "px";
         });
     }, []);
 
     return (
         <>
             <Navbar />
-            <div className="flex items-center relative justify-center h-screen">
-                <img className="absolute bottom-0 w-full" src={Hill1} alt="Hill1" ref={hill1Ref} />
+            <div className="flex items-center relative justify-center h-screen bg-white">
+                <img className="absolute bottom-0 w-full" src={Hill1} alt="Hill1" />
                 <img className="absolute bottom-0 left-0 w-full" src={Hill2} alt="Hill2" id="hill2" />
                 <img className="absolute bottom-0 right-0 w-full" src={Hill3} alt="Hill3" id="hill3" />
                 <img className="absolute bottom-0 left-0 w-full" src={Hill4} alt="Hill4" ref={hill4Ref} />
@@ -54,17 +51,16 @@ const Home = () => {
                 <img className="absolute top-0 right-0 w-full" src={Leaf} alt="Leaf" ref={leafRef} />
                 <div className="absolute" ref={textRef}>
                     <Slide duration={1300}>
-                        <h1 className="text-[5em] text-[#fff] font-bold text-center">ABUL FOZOL JUMMAN</h1>
+                        <h1 className="text-[6vw] md:text-[#fff] text-[#003329] font-bold text-center">ABUL FOZOL JUMMAN</h1>
                     </Slide>
                     <Slide direction={"right"} duration={1300}>
-                        <p className="text-[4em] text-[#fff] font-bold text-center">Full Stack Web Developer</p>
+                        <p className="text-[4vw] md:text-[#fff] text-[#003329] font-bold text-center">Full Stack Web Developer</p>
                     </Slide>
                 </div>
                 <img className="absolute bottom-0 w-full" src={Plant} alt="Plant" />
             </div>
-            <div className="relative p-24 bg-[#003329]">
+            <div className="relative bg-[#003329]">
                 <AboutMe></AboutMe>
-                {/* <Banner></Banner> */}
                 <Projects></Projects>
                 <ContactMe></ContactMe>
             </div>

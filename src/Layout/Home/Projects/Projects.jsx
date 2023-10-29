@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 const Projects = () => {
     return (
         <div id="projects" className="md:pb-16 md:pt-10 pb-12">
-            <div className="flex justify-between items-center pb-8 text-white px-5">
-                <JackInTheBox><h2 className="text-4xl font-bold">Top Projects</h2></JackInTheBox>
-                <Link to="/allProjects" className="text-lg text-right font-bold text-blue-600 underline">See All Projects</Link>
-            </div>
+            <JackInTheBox><h2 className="text-4xl font-bold text-center pb-10 text-white">Top Projects</h2></JackInTheBox>
             <Fade duration={4000}>
                 <div className="px-5 grid grid-cols-1 md:grid-cols-3 gap-5">
                     <div className="h-auto rounded-lg mb-5 bg-slate-300">
@@ -47,6 +44,9 @@ const Projects = () => {
                     </div>
                 </div>
             </Fade>
+            <div className="flex justify-center pt-4">
+                <Link to="/allProjects" className="button">See All Projects</Link>
+            </div>
         </div>
     );
 };

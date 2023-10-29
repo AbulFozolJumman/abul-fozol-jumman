@@ -1,28 +1,60 @@
-import { FaFacebookSquare, FaFileDownload, FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import resume from "../../../assets/Abul Fozol Jumman - Resume - Full Stack Web Developer.pdf"
 import { Slide } from "react-awesome-reveal";
+import Hill1 from "../../../assets/hill1.png"
+import Hill2 from "../../../assets/hill2.png"
+import Hill3 from "../../../assets/hill3.png"
+import Hill4 from "../../../assets/hill4.png"
+import Hill5 from "../../../assets/hill5.png"
+import Tree from "../../../assets/tree.png"
+import Leaf from "../../../assets/leaf.png"
+import Plant from "../../../assets/plant.png"
+import { useRef, useEffect } from 'react';
 
 const Banner = () => {
+    const text1Ref = useRef(null);
+    const text2Ref = useRef(null);
+    const leafRef = useRef(null);
+    const hill4Ref = useRef(null);
+    const hill5Ref = useRef(null);
+
+    useEffect(() => {
+        let text1 = text1Ref.current;
+        let text2 = text2Ref.current;
+        let leaf = leafRef.current;
+        let hill4 = hill4Ref.current;
+        let hill5 = hill5Ref.current;
+    
+        if (text1 && text2 && leaf && hill4 && hill5) {
+          window.addEventListener("scroll", () => {
+            let value = window.scrollY;
+    
+            text1.style.marginLeft = value * 2.5 + "px";
+            text2.style.marginRight = value * 2.5 + "px";
+            leaf.style.top = value * -1.5 + "px";
+            leaf.style.left = value * 1.5 + "px";
+            hill5.style.right = value * -1.5 + "px";
+            hill4.style.left = value * -1.5 + "px";
+          });
+        }
+      }, []);
+
     return (
-        <div id="banner" className="md:py-16 pt-24 pb-12 text-center fw-bolder text-white banner flex items-center justify-center">
+        <div className="flex items-center relative justify-center h-screen">
+            <img className="absolute bottom-0 w-full" src={Hill1} alt="Hill1" />
+            <img className="absolute bottom-0 left-0 w-full" src={Hill2} alt="Hill2" />
+            <img className="absolute bottom-0 right-0 w-full" src={Hill3} alt="Hill3" />
+            <img className="absolute bottom-0 left-0 w-full" src={Hill4} alt="Hill4" ref={hill4Ref} />
+            <img className="absolute bottom-0 right-0 w-full" src={Hill5} alt="Hill5" ref={hill5Ref} />
+            <img className="absolute bottom-0 w-full" src={Tree} alt="Tree" />
+            <img className="absolute top-0 right-0 w-full" src={Leaf} alt="Leaf" ref={leafRef} />
             <div>
-                <img src="https://i.ibb.co/MSd7mCz/ABUL-FOZOL-JUMMAN.jpg" alt="" className="h-52 block mx-auto w-52 rounded-full mb-5" />
                 <Slide duration={1300}>
-                    <h1 className="font-bold text-[40px] md:text-5xl mt-0">ABUL FOZOL JUMMAN</h1>
+                    <h1 className="text-[5em] text-[#fff] font-bold text-center" ref={text1Ref}>ABUL FOZOL JUMMAN</h1>
                 </Slide>
                 <Slide direction={"right"} duration={1300}>
-                    <p className="mt-4 font-medium text-3xl md:text-4xl">Full Stack Web Developer</p>
+                    <p className="text-[4em] text-[#fff] font-bold text-center" ref={text2Ref}>Full Stack Web Developer</p>
                 </Slide>
-                <p className="mt-4 font-medium text-xl"><a href="mailto:abulfozoljumman@gmail.com">abulfozoljumman@gmail.com</a></p>
-                <div className="flex text-5xl mt-5 gap-3 justify-center">
-                    <a target="_blank" rel="noreferrer" href="https://github.com/AbulFozolJumman/"><span><FaGithubSquare></FaGithubSquare></span></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/abul-fozol-jumman-414734279/"><span className="text-blue-500"><FaLinkedin></FaLinkedin></span></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/MDAFZumman/"><span className="text-blue-700"><FaFacebookSquare></FaFacebookSquare></span></a>
-                </div>
-                <a download="Abul Fozol Jumman - Resume" href={resume} id="resume" className="text-base mt-5 py-2 px-5 bg-green-600 font-bold rounded-3xl flex items-center gap-2 max-w-[160px] mx-auto">
-                    <span><FaFileDownload></FaFileDownload></span> MY RESUME
-                </a>
             </div>
+            <img className="absolute bottom-0 w-full" src={Plant} alt="Plant" />
         </div>
     );
 };
